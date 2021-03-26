@@ -7,10 +7,22 @@ import { LeafController1Service } from '../services/leaf-controller1.service';
   styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent implements OnInit {
+  defaultActionType:any="a";
+  actionTypes: any=['a','b','cc'];
+  query: String =' ';
 
   constructor(private leaf1: LeafController1Service) { }
 
   ngOnInit(): void {
+
+    
+  }
+
+  changeDefaultaction(event){
+    this.query = event.target.value;
+    console.log("HERE"+this.query);
+    this.defaultActionType= this.query;
+
   }
   onclick1() {
     //window.alert("clicked");
