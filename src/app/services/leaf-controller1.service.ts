@@ -19,7 +19,7 @@ export class LeafController1Service {
   }
 
   getLeafJSONbyid(idNum: number){
-    return this.http.post(`${API_URL}/leaf/getLeafJSONbyid/${idNum}`,{ responseType: 'text'});
+    return this.http.post(`${API_URL}/leaf/getLeafJSONbyid/${idNum}`,null);
   }
 
   getLeafJSONbyname(byName: String){

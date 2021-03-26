@@ -3,24 +3,40 @@
 
     <div class="row d-flex flex-row justify-content-between" style="background-color:rgb(197, 197, 204);">
         <div class="col-6">
-
-            <div class="form-group">
-                <label> EBBB</label>
-                <select [(ngModel)]="defaultActionType" class="form-control custom-select bg-light" id="action" (input)="changeDefaultaction($event)">
-                    <option *ngFor="let a of actionTypes">
-                        {{a}}
-                    </option>-->
-                </select>
-            </div>
+            <label> Display collective data</label>
             <button type="button" class="btn pl-5 pr-5 pt-2 pb-2" (click)="onclick1()">GetAll Entries</button>
         </div>
         <div class="col">
+            <div class="form-group">
+                <label> Select Id</label>
+                <select [(ngModel)]="defaultactionTypeid" class="form-control custom-select bg-light" id="action" (input)="changeDefaultaction2($event)">
+                    <option *ngFor="let a of data1">
+                        {{a.Id}}
+                    </option>
+                </select>
+            </div>
             <button type="button" class="btn btn-primary" (click)="onclick2()">GetEntries BYID</button>
         </div>
         <div class="col">
+            <div class="form-group">
+                <label> Select Name</label>
+                <select [(ngModel)]="defaultactionTypename" class="form-control custom-select bg-light" id="action" (input)="changeDefaultaction3($event)">
+                    <option *ngFor="let a of data1">
+                        {{a.name}}
+                    </option>
+                </select>
+            </div>
             <button type="button" class="btn btn-default" (click)="onclick3()">GetEntries by NAME</button>
         </div>
         <div class="col">
+            <div class="form-group">
+                <label> Select Gender</label>
+                <select [(ngModel)]="defaultactionTypegender" class="form-control custom-select bg-light" id="action" (input)="changeDefaultaction4($event)">
+                    <option *ngFor="let a of data1">
+                        {{a.sex}}
+                    </option>
+                </select>
+            </div>
             <button type="button" class="btn btn-info" (click)="onclick4()">Get Entries by Gender</button>
         </div>
     </div>
