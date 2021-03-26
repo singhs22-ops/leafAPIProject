@@ -1,0 +1,24 @@
+
+.MainPAge{
+    background-color: cyan;
+}
+.btn-info{
+    background-color: #007bff;
+    border-color: royalblue;
+    padding: 2px;
+    width: 100px
+}
+
+.btn-primary{
+    background-color: #007bff;
+    border-color: chartreuse;
+    padding: 2px;
+    width: 100px
+}
+
+.btn-default{
+    background-color: #007bff;
+    border-color: coral;
+    padding: 2px;
+    width: 100px
+}
