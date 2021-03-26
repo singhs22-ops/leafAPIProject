@@ -4,7 +4,7 @@
     <div class="row d-flex flex-row justify-content-between" style="background-color:rgb(197, 197, 204);">
         <div class="col-6">
             <label> Display collective data</label>
-            <button type="button" class="btn pl-5 pr-5 pt-2 pb-2" (click)="onclick1()">GetAll Entries</button>
+            <button type="button" class="btn pl-5 pr-5 pt-2 pb-2" (click)="onclick1()">GetAll Entries<p>{{DataToBePrinted1}}</p></button>
         </div>
         <div class="col">
             <div class="form-group">
@@ -15,7 +15,8 @@
                     </option>
                 </select>
             </div>
-            <button type="button" class="btn btn-primary" (click)="onclick2()">GetEntries BYID</button>
+            <button type="button" class="btn btn-primary" (click)="onclick2()">GetEntries BYID
+                <br><p>{{DataToBePrinted2}}</p></button>
         </div>
         <div class="col">
             <div class="form-group">
@@ -26,7 +27,7 @@
                     </option>
                 </select>
             </div>
-            <button type="button" class="btn btn-default" (click)="onclick3()">GetEntries by NAME</button>
+            <button type="button" class="btn btn-default" (click)="onclick3()">GetEntries by NAME<p>{{DataToBePrinted3}}</p></button>
         </div>
         <div class="col">
             <div class="form-group">
@@ -37,7 +38,7 @@
                     </option>
                 </select>
             </div>
-            <button type="button" class="btn btn-info" (click)="onclick4()">Get Entries by Gender</button>
+            <button type="button" class="btn btn-info" (click)="onclick4()">Get Entries by Gender<p>{{DataToBePrinted4}}</p></button>
         </div>
     </div>
 

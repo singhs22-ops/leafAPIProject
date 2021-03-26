@@ -19,6 +19,10 @@ export class MainPageComponent implements OnInit {
   queryGender: String = "F";
   defaultactionTypegender: String;
   actionTypesGender:String[];
+  DataToBePrinted1 :any;
+  DataToBePrinted2 :any;
+  DataToBePrinted3 :any;
+  DataToBePrinted4 :any;
 
 
   constructor(private leaf1: LeafController1Service) { }
@@ -51,6 +55,7 @@ export class MainPageComponent implements OnInit {
     //window.alert("clicked");
     this.leaf1.getLeafJSONentries().subscribe(
       data => {
+        this.DataToBePrinted1=JSON.stringify(data);
         this.data1 = data['result'];
         console.log("datafulresult"+JSON.stringify(this.data1));
 
@@ -75,6 +80,7 @@ export class MainPageComponent implements OnInit {
 
     this.leaf1.getLeafJSONbyid(this.queryid).subscribe(
       data => {
+        this.DataToBePrinted2= JSON.stringify(data);
        
         console.log(data);
 
@@ -87,9 +93,10 @@ export class MainPageComponent implements OnInit {
   }
 
   onclick3() {
-    //window.alert("clicked");
+
     this.leaf1.getLeafJSONbyname(this.queryName).subscribe(
       data => {
+        this.DataToBePrinted2= JSON.stringify(data);
         
         console.log(data);
 
@@ -105,6 +112,7 @@ export class MainPageComponent implements OnInit {
     //window.alert("clicked");
     this.leaf1.getLeafJSONbySex(this.queryGender).subscribe(
       data => {
+        this.DataToBePrinted4=data;
        
         console.log(data);
 
