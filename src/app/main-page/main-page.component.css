@@ -26,4 +26,16 @@
 
 .table{
     background-color: aliceblue;
+    border-color: black;
+    color: coral;
+}
+.th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+  }
+.th{
+    padding: 20px;
 }
